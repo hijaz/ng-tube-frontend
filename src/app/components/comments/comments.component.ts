@@ -11,7 +11,7 @@ import { Comment } from 'src/app/types/Comment';
 export class CommentsComponent {
   @Input() comments!: Comment[];
   @Input() id!: string;
-  myComment: string = '';
+  myComment = '';
 
   constructor(private http: HttpClient) {}
 

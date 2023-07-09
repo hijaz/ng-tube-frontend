@@ -4,11 +4,6 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { backendUrl } from 'src/app/constants';
 
-interface User {
-  userid: string;
-  password: string;
-}
-
 @Component({
   selector: 'app-login-form',
   templateUrl: './login-form.component.html',
