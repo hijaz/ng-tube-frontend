@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Install Node.js') {
             steps {
-                nvm(nodeJSInstallationName: 'Node.js v16.17.0') {
+                nvm(version: '16.17.0') {
                     sh 'node --version'
                 }
             }
