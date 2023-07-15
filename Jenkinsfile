@@ -13,13 +13,17 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh 'npm install'
+                withEnv(["PATH+NODE=$NODEJS_HOME/bin"]) {
+                    sh 'npm install'
+                }
             }
         }
 
         stage('Build') {
             steps {
-                sh 'npm run build'
+                withEnv(["PATH+NODE=$NODEJS_HOME/bin"]) {
+                    sh 'npm run build'
+                }
             }
         }
     }
